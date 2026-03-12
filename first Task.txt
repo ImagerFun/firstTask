@@ -1,0 +1,14 @@
+q, b = map(int, input("введите верхнюю и нижнюю границы: ").split())
+fib1 = 0
+fib2 = 1
+
+a = []
+while fib2 <= b:
+    fib1, fib2 = fib2, fib1+fib2
+    if fib1 >= q:
+        a.append(fib1)
+if a != []:
+    a = map(str, a)
+    print(" ".join(a))
+else:
+    print("В заданном диапазоне нет чисел Фибоначчи")
